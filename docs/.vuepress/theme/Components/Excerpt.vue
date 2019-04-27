@@ -7,7 +7,7 @@
             <div class="excerpt-head-title">{{item.title}}</div>
             <div class="excerpt-head-date">{{item.frontmatter.Date}}</div>
           </div>
-          <br>
+          <div class="excerpt-cutting-line"></div>
           <div class="excerpt-content" v-html="item.excerpt"></div>
       </div>
     </div>
@@ -25,7 +25,6 @@ export default {
   props: {},
   mounted() {
     this.getList()
-    console.log(this.$route.path);
   },
   methods: {
     getList() {
@@ -43,7 +42,6 @@ export default {
     },
     goDetail(url){
       location.href = url;
-      console.log(url)
     }
   },
   watch: {
@@ -56,19 +54,37 @@ export default {
 
 <style lang="less" scoped>
 .excerpt{
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   .wrapper{
     border: 1px solid #666;
-    border-radius: 10px;
-    margin:1rem 0;
+    border-radius: .5rem;
+    margin:2rem 0;
     padding: .8rem;
+    &:first-child{
+      margin-top: 0
+    }
   }
   &-head{
+    display: flex;
+    align-items: center;
+    height: 3rem;
     &-title{
-      font-size: 1.8rem;
-
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-right: 2rem;
     }
+    &-date{
+      letter-spacing: .1rem;
+    }
+  }
+  &-content{
+    overflow: hidden;
+  }
+  &-cutting-line{
+    width: 100%;
+    height: 1px;
+    background-color:#3eaf7c38
   }
   
   
