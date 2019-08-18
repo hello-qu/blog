@@ -5,7 +5,7 @@
           @click="goDetail(item.path)">
           <div class="excerpt-head">
             <div class="excerpt-head-title">{{item.title}}</div>
-            <div class="excerpt-head-date">{{item.frontmatter.Date}}</div>
+            <div class="excerpt-head-date">{{item.frontmatter.Date | convertTime}}</div>
           </div>
           <div class="excerpt-cutting-line"></div>
           <div class="excerpt-content" v-html="item.excerpt"></div>
@@ -25,6 +25,11 @@ export default {
   props: {},
   mounted() {
     this.getList()
+  },
+  filters:{
+    convertTime(val){
+      return val.split(' ')[0].replace(/\./g,'-')
+    },
   },
   methods: {
     getList() {
@@ -57,7 +62,7 @@ export default {
   width: 50%;
   margin: 0 auto;
   .wrapper{
-    border: 1px solid #666;
+    background: #f4f5f682;
     border-radius: .5rem;
     margin:2rem 0;
     padding: .8rem;
@@ -69,6 +74,8 @@ export default {
     display: flex;
     align-items: center;
     height: 3rem;
+    cursor: pointer;
+    justify-content: space-between;
     &-title{
       font-size: 1.2rem;
       font-weight: 700;
@@ -76,6 +83,17 @@ export default {
     }
     &-date{
       letter-spacing: .1rem;
+      font-size: .9rem;
+      position: relative;
+      &::before{
+        content: '';
+        background: url("../time.png") no-repeat center;
+        position: absolute;
+        background-size: 100%; 
+        width: 20px;
+        height: 20px;
+        left: -1.5rem;
+     }
     }
   }
   &-content{
