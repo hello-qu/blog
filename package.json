@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "move": "vuepress eject [targetDir]"
+    "move": "vuepress eject [targetDir]",
+    "deploy":"./deploy.sh"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,5 @@
     "less-loader": "^4.1.0",
     "vuepress": "^0.14.11"
   },
-  "homepage": "https://hello-qu.github.io"
+  "homepage": "https://hello-qu.github.io/"
 }
