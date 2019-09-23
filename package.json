@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "move": "vuepress eject [targetDir]",
+    "move": "vuepress eject [targetDir]"
   },
   "keywords": [],
   "author": "",
