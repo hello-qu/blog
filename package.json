@@ -18,5 +18,6 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "vuepress": "^0.14.11"
-  }
+  },
+  "homepage": "https://hello-qu.github.io"
 }
