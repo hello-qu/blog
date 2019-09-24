@@ -45,8 +45,8 @@ export default {
         }
       });
     },
-    goDetail(url){
-      location.href = url;
+    goDetail(url){  
+      this.$router.push(url)
     }
   },
   watch: {
