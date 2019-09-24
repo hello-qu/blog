@@ -1,7 +1,7 @@
 module.exports = {
   title: 'QuJun',
   description:'',
-  base:'/blog',
+  base:"/blog/",
   plugins: {  
     '@vuepress/pagination':{
       postsFilter:(({ type }) => type === 'post'),
