@@ -63,7 +63,7 @@ chrome.devtools.network.onRequestFinished.addListener(function
             }
             var data = {
                 url: url,
-                requestId: (new Date().getMilliseconds())*(Math.floor(Math.random()*1000)),
+                requestId: (new date().getMilliseconds())*(Math.floor(Math.random()*1000)),
                 request: request,
                 content: content,
                 noresponse:noresponse
