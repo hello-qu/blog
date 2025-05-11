@@ -28,7 +28,7 @@ const list = computed(() => {
       console.log(articleDate)
       return  {
           title: mod.frontmatter?.title || path.split('/').pop().replace('.md', ''),
-          link: path.replace('.md', '').replace('../../', '../../blog/'),
+          link: path.replace('.md', ''),
           date: articleDate || new Date(0)
         }
 })
@@ -41,7 +41,7 @@ const list = computed(() => {
     <div class="text-3xl font-bold mb-5">文章列表</div>
     <ul class="space-y-3">
       <li v-for="item in list" :key="item.link" class="list-disc">
-        <a :href="item.link" class="hover:text-green-600">{{ item.title }}</a>
+        <a :href="item.link" style="color:#3451b2; text-decoration: underline;" class="hover:text-green-600 font-medium">{{ item.title }}</a>
         <span class="text-gray-500 ml-2">{{ new Date(item.date).toLocaleDateString() }}</span>
       </li>
     </ul>

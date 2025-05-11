@@ -5,11 +5,11 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   title: 'QuJun',
   description: '',
-  base: '/blog/',
+  base: '/',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Javascript', link: '/Javascript/' },
+      { text: '主页', link: '/' },
+      { text: '前端', link: '/Javascript/' },
       { text: '杂记', link: '/others/' },
     ]
   },
