@@ -1,19 +1,25 @@
 name: GitHub Actions Build and Deploy Demo
+
 on:
   push:
     branches:
       - main
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@v4.4.0
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: docs/.vuepress/dist
-        BUILD_SCRIPT: npm install && npm run build
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        with:
+          branch: gh-pages
+          folder: docs/.vuepress/dist
+          token: ${{ secrets.ACCESS_TOKEN }}
