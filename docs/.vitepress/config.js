@@ -15,15 +15,5 @@ export default defineConfig({
   },
   plugins: [
     tailwindcss(),
-  ],
-  async buildEnd() {
-    // 🔥 自动创建 tags/[tag].html 路径
-    const tags = Object.keys(tagsMap)
-    this.siteConfig.pages = [
-      ...this.siteConfig.pages,
-      ...tags.map(tag => ({
-        path: `/tags/${tag}.html`
-      }))
-    ]
-  }
+  ]
 })
