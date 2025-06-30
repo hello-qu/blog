@@ -15,7 +15,8 @@
   "license": "ISC",
   "homepage": "https://hello-qu.github.io/",
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.6"
+    "@tailwindcss/vite": "^4.1.6",
+    "gray-matter": "^4.0.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.6",

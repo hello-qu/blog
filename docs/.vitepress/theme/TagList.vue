@@ -1,12 +1,19 @@
 <script setup>
 import { useData, useRoute } from 'vitepress'
 import { computed } from 'vue'
-import {data as posts} from './posts.data.js'
+import { data as posts } from './posts.data.js'
+
+const { params } = useData() // 读取动态路由参数
 
 const route = useRoute()
 
 // 从路径中获取标签名
 const currentTag = computed(() => {
+  // 优先使用动态路由参数
+  if (params && params.value && params.value.tag) {
+    return params.value.tag
+  }
+  // 兼容旧的 URL 解析方式
   const path = route.path
   if (!path.startsWith('/tags/')) return ''
   const tag = path.slice(6, -5) // 移除 '/tags/' 前缀和 '.html' 后缀

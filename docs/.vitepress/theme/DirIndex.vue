@@ -2,7 +2,6 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { data as posts} from './posts.data.js'
-import './tailwind.css'
 
 const { page } = useData()
 
