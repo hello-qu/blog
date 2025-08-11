@@ -1,1 +1,0 @@
-import{_ as t,c as a,o as e}from"./chunks/framework.Dgg8-8ov.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{"layout":"TagList"},"headers":[],"params":{"tag":"心情"},"relativePath":"tags/心情.md","filePath":"tags/[tag].md"}'),s={name:"tags/心情.md"};function r(o,c,n,_,p,i){return e(),a("div")}const f=t(s,[["render",r]]);export{m as __pageData,f as default};

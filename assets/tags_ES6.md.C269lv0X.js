@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as e}from"./chunks/framework.Cd-3tpCq.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{"layout":"TagList"},"headers":[],"params":{"tag":"ES6"},"relativePath":"tags/ES6.md","filePath":"tags/[tag].md"}'),s={name:"tags/ES6.md"};function r(o,c,n,p,i,_){return e(),a("div")}const f=t(s,[["render",r]]);export{m as __pageData,f as default};

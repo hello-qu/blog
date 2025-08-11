@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as e}from"./chunks/framework.Cd-3tpCq.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{"layout":"TagList"},"headers":[],"params":{"tag":"前端"},"relativePath":"tags/前端.md","filePath":"tags/[tag].md"}'),s={name:"tags/前端.md"};function r(o,c,n,_,p,i){return e(),a("div")}const f=t(s,[["render",r]]);export{m as __pageData,f as default};
